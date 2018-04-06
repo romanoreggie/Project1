@@ -1,11 +1,15 @@
 console.log("Up and running");
 
+var myGamePiece;
+var myObstacle;
+
 function startGame() {
     myGameArea.start();
     myGamePiece = new component(50, 3, "black", 10, 385);
+    myObstacle  = new component(10, 10, "red", 300, 120);
 }
 
-var myGameArea = {
+const myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
         this.canvas.width = 600;
@@ -39,16 +43,15 @@ function component(width, height, color, x, y) {
     }
     this.newPos = function() {
         this.x += this.speedX;
-        this.y += this.speedY;
     }
   }
 
 function updateGameArea() {
     myGameArea.clear();
     myGamePiece.speedX = 0;
-    myGamePiece.speedY = 0;
-    if (myGameArea.key && myGameArea.key == 37) {myGamePiece.speedX = -2; }
-    if (myGameArea.key && myGameArea.key == 39) {myGamePiece.speedX = 2; }
+    myObstacle.update();
+    if (myGameArea.key && myGameArea.key == 37) {myGamePiece.speedX = -2.5; }
+    if (myGameArea.key && myGameArea.key == 39) {myGamePiece.speedX = 2.5; }
     myGamePiece.newPos();
     myGamePiece.update();
 }
