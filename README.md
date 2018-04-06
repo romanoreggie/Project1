@@ -1,19 +1,23 @@
-# Deadliest Catch
+# Deadliest Catch ##
 -------------------------------------
-## Objective
+## Objective ##
+
 The objective of this game is to slide along the bottom of the screen and catch specific objects as they fall while avoiding other objects.
 -------------------------------------
-## Play the Game Here:
+## Play the Game Here: ##
+
 "insert link after finished"
 -------------------------------------
-## Motivation
--------------------------------------
+## Motivation ##
+
 Create a game that challenges users reaction and timing along the way while also pushing myself to develop something more than I have before.
 -------------------------------------
-## Wireframe Mockup
+## Wireframe Mockup ##
+
 "insert image"
 -------------------------------------
-## Technology behind the design:
+## Technology behind the design: ##
+
 Built using HTML, Bootstrap, CSS, and Javascript.
 -------------------------------------
 ## User 1
@@ -23,22 +27,30 @@ Age: 12
 Small town somewhere in the USA.
 
 **Goals**
+
 -World domination
 
 **Motivation**
+
 -To first beat all of his friend's high score then the rest of the world.
+
 -Play something different
 
 **Likes**
+
 -Escaping his small town mentally however possible
+
 -Surfing the web and playing random games
+
 -Hanging out with friends
 
 **Dislikes**
+
 -Games that have no real challenge to them
+
 -His small town
 -------------------------------------
-## MVP User Stories
+## MVP User Stories ##
 
 As a user, I should be able to move a slider across the bottom.
 
@@ -48,7 +60,7 @@ As a user, I should be able to catch objects and score points.
 
 As a user, I should be able to see my current score and how much time is left.
 --------------------------------------
-## Stretch Goals
+## Stretch Goals ##
 
 As a user, I should have the ability to change the difficulty.
 
