@@ -4,6 +4,7 @@ var myGamePiece;
 var myObstacles = [];
 var myObstacles2 = [];
 var myObstacles3 = [];
+var myObstacles4 = [];
 var myScore;
 // myObstacles  = new component(10, 10, "red", 300, 120);
 
@@ -34,8 +35,7 @@ var myGameArea = {
   },
   score: function() {
     if (myGamePiece.crashWith == true) {
-      return myScore += 1;
-
+      return myScore.score += 1;
     };
   }
 }
@@ -84,40 +84,60 @@ function component(width, height, color, x, y, type) {
 }
 
 
-
+var currentScore = 0;
 function updateGameArea() {
+  myGamePiece.speedX = 0;
   if (myGameArea.key && myGameArea.key == 37) {
     myGamePiece.speedX = -2.5;
   }
   if (myGameArea.key && myGameArea.key == 39) {
     myGamePiece.speedX = 2.5;
   }
+  myScore.text = "SCORE: " + currentScore;
   for (i = 0; i < myObstacles.length; i += 1) {
-    if (myGamePiece.crashWith(myObstacles[i] || myObstacles2[i] || myObstacles3[i])) {
-      myGameArea.score();
-      console.log(myScore.text += 1);
+    if (myGamePiece.crashWith(myObstacles[i])) {
+      currentScore += 1;
+      console.log(currentScore);
+    }
+  }
+  for (i = 0; i < myObstacles2.length; i += 1) {
+    if (myGamePiece.crashWith(myObstacles2[i])) {
+      currentScore += 1;
+      console.log(currentScore);
+    }
+  }
+  for (i = 0; i < myObstacles3.length; i += 1) {
+    if (myGamePiece.crashWith(myObstacles3[i])) {
+      currentScore += 1;
+      console.log(currentScore);
+    }
+  }
+  for (i = 0; i < myObstacles4.length; i += 1) {
+    if (myGamePiece.crashWith(myObstacles4[i])) {
+      currentScore += 1;
+      console.log(currentScore);
     }
   }
   myGameArea.clear();
   myGameArea.frameNo += 1;
 
 
-  if (myGameArea.frameNo == 1 || everyinterval(100)) {
+  if (everyinterval(200)) {
     myObstacles.push(new component(10, 10, "red", 60, 0));
   }
   for (i = 0; i < myObstacles.length; i += 1) {
     myObstacles[i].y += 1;
     myObstacles[i].update();
   }
-  if (myGameArea.frameNo == 1 || everyinterval(150)) {
+  if (everyinterval(450)) {
     y = myGameArea.canvas.height;
-    myObstacles2.push(new component(10, 10, "red", 100, 0));
+    myObstacles2.push(new component(10, 10, "red", 230, 0));
   }
   for (i = 0; i < myObstacles2.length; i += 1) {
     myObstacles2[i].y += 1;
     myObstacles2[i].update();
   }
-  if (myGameArea.frameNo == 1 || everyinterval(450)) {
+  if (everyinterval(150)) {
     y = myGameArea.canvas.height;
     myObstacles3.push(new component(10, 10, "red", 550, 0));
   }
@@ -125,21 +145,20 @@ function updateGameArea() {
     myObstacles3[i].y += 1;
     myObstacles3[i].update();
   }
+  if (everyinterval(650)) {
+    y = myGameArea.canvas.height;
+    myObstacles4.push(new component(10, 10, "red", 200, 0));
+  }
+  for (i = 0; i < myObstacles4.length; i += 1) {
+    myObstacles4[i].y += 1;
+    myObstacles4[i].update();
+  }
 
-
-  // if (myGamePiece.crashWith(myObstacles || myObstacles2 || myObstacles3)) {
-  //       myGameArea.stop();
-  //     } else {
-  // myGameArea.clear();
-  myScore.text="SCORE: " + myGamePiece.crashWith;
+  myScore.text="SCORE: " + currentScore;
   myScore.update();
   myGamePiece.newPos();
   myGamePiece.update();
 }
-
-// if myGamepiece.crashWith == true;
-// return myScore += 1;
-
 
 function everyinterval(n) {
   if ((myGameArea.frameNo / n) % 1 == 0) {
@@ -148,6 +167,10 @@ function everyinterval(n) {
   return false;
 }
 
+function stopMove() {
+    myGamePiece.speedX = 0;
+    myGamePiece.speedY = 0;
+}
 
 function clearmove() {
   myGamePiece.speedX = 0;
