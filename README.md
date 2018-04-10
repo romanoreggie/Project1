@@ -1,4 +1,4 @@
-# Deadliest Catch ##
+# Deadliest Catch #
 -------------------------------------
 ## Objective ##
 
@@ -6,7 +6,7 @@ The objective of this game is to slide along the bottom of the screen and catch 
 -------------------------------------
 ## Play the Game Here: ##
 
-"insert link after finished"
+tacit-yam.surge.sh
 -------------------------------------
 ## Motivation ##
 
