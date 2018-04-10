@@ -110,24 +110,25 @@ function updateGameArea() {
 
   for (i = 0; i < myObstacles.length; i += 1) {
     if (myGamePiece.crashWith(myObstacles[i])) {
-      currentScore += 1;
+      currentScore += .5;
     }
   }
   for (i = 0; i < myObstacles2.length; i += 1) {
     if (myGamePiece.crashWith(myObstacles2[i])) {
-      currentScore += 1;
+      currentScore += .5;
     }
   }
   for (i = 0; i < myObstacles3.length; i += 1) {
     if (myGamePiece.crashWith(myObstacles3[i])) {
-      currentScore += 1;
+      currentScore += .5;
     }
   }
   for (i = 0; i < myObstacles4.length; i += 1) {
     if (myGamePiece.crashWith(myObstacles4[i])) {
-      currentScore += 1;
+      currentScore += .5;
     }
   }
+  //negative object
   for (i = 0; i < myObstacles5.length; i += 1) {
     if (myGamePiece.crashWith(myObstacles5[i])) {
       currentScore -= 1;
@@ -141,7 +142,7 @@ function updateGameArea() {
 
 
   if (everyinterval(320)) {
-    myObstacles.push(new component(10, 10, "red", 60, 0));
+    myObstacles.push(new component(50, 50, "https://i.imgur.com/dhjX6MZ.png", 60, 0, "image"));
   }
   for (i = 0; i < myObstacles.length; i += 1) {
     myObstacles[i].y += 2;
@@ -149,7 +150,7 @@ function updateGameArea() {
   }
   if (everyinterval(450)) {
     y = myGameArea.canvas.height;
-    myObstacles2.push(new component(10, 10, "red", 530, 0));
+    myObstacles2.push(new component(50, 50, "https://i.imgur.com/dhjX6MZ.png", 530, 0, "image"));
   }
   for (i = 0; i < myObstacles2.length; i += 1) {
     myObstacles2[i].y += 2;
@@ -157,7 +158,7 @@ function updateGameArea() {
   }
   if (everyinterval(750)) {
     y = myGameArea.canvas.height;
-    myObstacles3.push(new component(10, 10, "red", 750, 0));
+    myObstacles3.push(new component(50, 50, "https://i.imgur.com/Kg3qGZb.png", 750, 0, "image"));
   }
   for (i = 0; i < myObstacles3.length; i += 1) {
     myObstacles3[i].y += 2;
@@ -165,7 +166,7 @@ function updateGameArea() {
   }
   if (everyinterval(650)) {
     y = myGameArea.canvas.height;
-    myObstacles4.push(new component(10, 10, "red", 300, 0));
+    myObstacles4.push(new component(50, 50, "https://i.imgur.com/Kg3qGZb.png", 300, 0, "image"));
   }
   for (i = 0; i < myObstacles4.length; i += 1) {
     myObstacles4[i].y += 2;
@@ -173,7 +174,7 @@ function updateGameArea() {
   }
   if (everyinterval(600)) {
     y = myGameArea.canvas.height;
-    myObstacles5.push(new component(10, 10, "red", 475, 0));
+    myObstacles5.push(new component(70, 70, "https://i.imgur.com/k1gfSzQ.png", 475, 0, "image"));
   }
   for (i = 0; i < myObstacles5.length; i += 1) {
     myObstacles5[i].y += 2;

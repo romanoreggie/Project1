@@ -7,3 +7,10 @@ canvas {
 body {
   text-align: center;
 }
+
+h1 {
+  font-family: "Amity Jack";
+  font-size: 72px;
+  color: #D64527;
+}
+/* font-family: "Amity Jack" */
