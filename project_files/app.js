@@ -8,13 +8,17 @@ var myObstacles4 = [];
 var myObstacles5 = [];
 var myScore;
 var myBackground;
+var myMusic;
 
 function startGame() {
   myGamePiece = new component(200, 150, "https://i.imgur.com/kVwhPHP.png", 10, 470,"image");
   myScore = new component("30px", "Consolas", "black", 250, 40, "text");
   myBackground = new component(1000, 600, "https://i.imgur.com/MJJRGzZ.jpg", 0, 0, "image")
+  myMusic = new sound("JawsThemeSong.mp3");
   myGameArea.start();
+  myMusic.play();
 }
+
 
 var myGameArea = {
   canvas: document.createElement("canvas"),
@@ -101,10 +105,10 @@ var currentScore = 0;
 function updateGameArea() {
   myGamePiece.speedX = 0;
   if (myGameArea.key && myGameArea.key == 37) {
-    myGamePiece.speedX = -2.5;
+    myGamePiece.speedX = -3;
   }
   if (myGameArea.key && myGameArea.key == 39) {
-    myGamePiece.speedX = 2.5;
+    myGamePiece.speedX = 3;
   }
   myScore.text = "SCORE: " + currentScore;
 
@@ -186,6 +190,21 @@ function updateGameArea() {
   myGamePiece.update();
 }
 
+function sound(src) {
+  this.sound = document.createElement("audio");
+  this.sound.src = src;
+  this.sound.setAttribute("preload", "auto");
+  this.sound.setAttribute("controls", "none");
+  this.sound.style.display = "none";
+  document.body.appendChild(this.sound);
+  this.play = function(){
+    this.sound.play();
+  }
+  this.stop = function(){
+    this.sound.pause();
+  }
+}
+
 function everyinterval(n) {
   if ((myGameArea.frameNo / n) % 1 == 0) {
     return true;
@@ -202,3 +221,5 @@ function clearmove() {
   myGamePiece.speedX = 0;
   myGamePiece.speedY = 0;
 }
+
+// new audio("JawsThemeSong.mp3")
