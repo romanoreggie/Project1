@@ -1,0 +1,27 @@
+h1 {
+  font-family: "Amity Jack";
+  font-size: 72px;
+  color: #CB444A;
+}
+h2 {
+  font-family: "Amity Jack";
+  font-size: 60px;
+  color: #CB444A;
+}
+h3 {
+  font-family: "Amity Jack";
+  font-size: 40px;
+  color: #CB444A;
+}
+body {
+  text-align: center;
+  background-color: #333333;
+}
+p {
+  font-family: "Amity Jack";
+  color: white;
+  font-size: 20px;
+}
+u {
+  color: #CB444A;
+}
