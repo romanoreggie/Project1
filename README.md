@@ -1,23 +1,18 @@
 # Deadliest Catch #
 -------------------------------------
 ## Objective ##
-
 The objective of this game is to slide along the bottom of the screen and catch specific objects as they fall while avoiding other objects.
 -------------------------------------
 ## Play the Game Here: ##
-
 tacit-yam.surge.sh
 -------------------------------------
 ## Motivation ##
-
 Create a game that challenges users reaction and timing along the way while also pushing myself to develop something more than I have before.
 -------------------------------------
 ## Wireframe Mockup ##
-
 "insert image"
 -------------------------------------
 ## Technology behind the design: ##
-
 Built using HTML, Bootstrap, CSS, and Javascript.
 -------------------------------------
 ## User 1
