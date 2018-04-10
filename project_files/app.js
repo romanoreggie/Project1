@@ -5,20 +5,22 @@ var myObstacles = [];
 var myObstacles2 = [];
 var myObstacles3 = [];
 var myObstacles4 = [];
+var myObstacles5 = [];
 var myScore;
-// myObstacles  = new component(10, 10, "red", 300, 120);
+var myBackground;
 
 function startGame() {
-  myGamePiece = new component(100, 3, "black", 10, 385);
-  myScore = new component("30px", "Consolas", "black", 280, 40, "text")
+  myGamePiece = new component(200, 150, "https://i.imgur.com/kVwhPHP.png", 10, 470,"image");
+  myScore = new component("30px", "Consolas", "black", 250, 40, "text");
+  myBackground = new component(1000, 600, "https://i.imgur.com/MJJRGzZ.jpg", 0, 0, "image")
   myGameArea.start();
 }
 
 var myGameArea = {
   canvas: document.createElement("canvas"),
   start: function() {
-    this.canvas.width = 600;
-    this.canvas.height = 400;
+    this.canvas.width = 1000;
+    this.canvas.height = 600;
     this.context = this.canvas.getContext("2d");
     document.body.insertBefore(this.canvas, document.body.childNodes[0]);
     this.frameNo = 0;
@@ -43,6 +45,10 @@ var myGameArea = {
 
 function component(width, height, color, x, y, type) {
   this.type = type;
+    if (type == "image") {
+      this.image = new Image();
+      this.image.src = color;
+    }
   this.width = width;
   this.height = height;
   this.speedX = 0;
@@ -55,6 +61,11 @@ function component(width, height, color, x, y, type) {
       ctx.font = this.width + " " + this.height;
       ctx.fillStyle = color;
       ctx.fillText(this.text, this.x, this.y);
+    } else if (this.type == "image") {
+        ctx.drawImage(this.image,
+        this.x,
+        this.y,
+        this.width, this.height);
     } else {
       ctx.fillStyle = color;
       ctx.fillRect(this.x, this.y, this.width, this.height);
@@ -73,10 +84,12 @@ function component(width, height, color, x, y, type) {
     var othertop = otherobj.y;
     var otherbottom = otherobj.y + (otherobj.height);
     var score = true;
-    if ((mybottom < othertop) ||
+    if
+      ((mybottom < othertop) ||
       (mytop > otherbottom) ||
       (myright < otherleft) ||
-      (myleft > otherright)) {
+      (myleft > otherright))
+      {
       score = false;
     }
     return score;
@@ -94,66 +107,78 @@ function updateGameArea() {
     myGamePiece.speedX = 2.5;
   }
   myScore.text = "SCORE: " + currentScore;
+
   for (i = 0; i < myObstacles.length; i += 1) {
     if (myGamePiece.crashWith(myObstacles[i])) {
       currentScore += 1;
-      console.log(currentScore);
     }
   }
   for (i = 0; i < myObstacles2.length; i += 1) {
     if (myGamePiece.crashWith(myObstacles2[i])) {
       currentScore += 1;
-      console.log(currentScore);
     }
   }
   for (i = 0; i < myObstacles3.length; i += 1) {
     if (myGamePiece.crashWith(myObstacles3[i])) {
       currentScore += 1;
-      console.log(currentScore);
     }
   }
   for (i = 0; i < myObstacles4.length; i += 1) {
     if (myGamePiece.crashWith(myObstacles4[i])) {
       currentScore += 1;
-      console.log(currentScore);
+    }
+  }
+  for (i = 0; i < myObstacles5.length; i += 1) {
+    if (myGamePiece.crashWith(myObstacles5[i])) {
+      currentScore -= 1;
     }
   }
   myGameArea.clear();
   myGameArea.frameNo += 1;
+  myBackground.newPos();
+  myBackground.update();
+  // myBackground.speedX = -1;
 
 
-  if (everyinterval(200)) {
+  if (everyinterval(320)) {
     myObstacles.push(new component(10, 10, "red", 60, 0));
   }
   for (i = 0; i < myObstacles.length; i += 1) {
-    myObstacles[i].y += 1;
+    myObstacles[i].y += 2;
     myObstacles[i].update();
   }
   if (everyinterval(450)) {
     y = myGameArea.canvas.height;
-    myObstacles2.push(new component(10, 10, "red", 230, 0));
+    myObstacles2.push(new component(10, 10, "red", 530, 0));
   }
   for (i = 0; i < myObstacles2.length; i += 1) {
-    myObstacles2[i].y += 1;
+    myObstacles2[i].y += 2;
     myObstacles2[i].update();
   }
-  if (everyinterval(150)) {
+  if (everyinterval(750)) {
     y = myGameArea.canvas.height;
-    myObstacles3.push(new component(10, 10, "red", 550, 0));
+    myObstacles3.push(new component(10, 10, "red", 750, 0));
   }
   for (i = 0; i < myObstacles3.length; i += 1) {
-    myObstacles3[i].y += 1;
+    myObstacles3[i].y += 2;
     myObstacles3[i].update();
   }
   if (everyinterval(650)) {
     y = myGameArea.canvas.height;
-    myObstacles4.push(new component(10, 10, "red", 200, 0));
+    myObstacles4.push(new component(10, 10, "red", 300, 0));
   }
   for (i = 0; i < myObstacles4.length; i += 1) {
-    myObstacles4[i].y += 1;
+    myObstacles4[i].y += 2;
     myObstacles4[i].update();
   }
-
+  if (everyinterval(600)) {
+    y = myGameArea.canvas.height;
+    myObstacles5.push(new component(10, 10, "red", 475, 0));
+  }
+  for (i = 0; i < myObstacles5.length; i += 1) {
+    myObstacles5[i].y += 2;
+    myObstacles5[i].update();
+  }
   myScore.text="SCORE: " + currentScore;
   myScore.update();
   myGamePiece.newPos();
