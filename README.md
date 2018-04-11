@@ -7,13 +7,13 @@ The objective of this game is to slide along the bottom of the screen and catch 
 ![](https://i.imgur.com/8E1bIZW.png)
 
 ## Play the Game Here:
-tacit-yam.surge.sh
+[illegal-friends.surge.sh]
 -------------------------------------
 ## Motivation
 Create a game that challenges users reaction and timing along the way while also pushing myself to develop something more than I have before.
 -------------------------------------
 ## Wireframe Mockup
-"insert image"
+![](https://i.imgur.com/HuNM9Ct.png)
 -------------------------------------
 ## Technology behind the design:
 Built using HTML, Bootstrap, CSS, and Javascript.
