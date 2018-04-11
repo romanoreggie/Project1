@@ -5,6 +5,7 @@ The objective of this game is to slide along the bottom of the screen and catch 
 -------------------------------------
 ## Game Play Preview:
 ![](https://i.imgur.com/8E1bIZW.png)
+-------------------------------------
 
 ## Play the Game Here:
 [illegal-friends.surge.sh]
@@ -47,6 +48,30 @@ Small town somewhere in the USA.
 -Games that have no real challenge to them
 
 -His small town
+-------------------------------------
+## User 2
+**Sarah**
+Age: 8
+
+Beach town somewhere on the West Coast.
+
+**Goals**
+-Scare her alien looking new born brother.
+
+**Motivation**
+-To one day make her parents realize she is truly the best child.
+
+-Entertain herself while plotting against her brother.
+
+**Likes**
+
+-Spending time at the beach with her parents.
+
+-Pretending she is a shark when she swims around with a fin.
+
+**Dislikes**
+
+-Being told no
 -------------------------------------
 ## MVP User Stories ##
 
