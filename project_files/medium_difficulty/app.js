@@ -118,7 +118,7 @@ function updateGameArea() {
   }
   for (i = 0; i < myObstacles2.length; i += 1) {
     if (myGamePiece.crashWith(myObstacles2[i])) {
-      currentScore -= 1;
+      currentScore += .5;
     }
   }
   for (i = 0; i < myObstacles3.length; i += 1) {
@@ -128,7 +128,7 @@ function updateGameArea() {
   }
   for (i = 0; i < myObstacles4.length; i += 1) {
     if (myGamePiece.crashWith(myObstacles4[i])) {
-      currentScore += .5;
+      currentScore -= 1;
     }
   }
   //negative object
@@ -153,7 +153,7 @@ function updateGameArea() {
   }
   if (everyinterval(450)) {
     y = myGameArea.canvas.height;
-    myObstacles2.push(new component(70, 70, "https://i.imgur.com/k1gfSzQ.png", 530, 0, "image"));
+    myObstacles2.push(new component(50, 50, "https://i.imgur.com/Kg3qGZb.png", 530, 0, "image"));
   }
   for (i = 0; i < myObstacles2.length; i += 1) {
     myObstacles2[i].y += 2;
@@ -169,7 +169,7 @@ function updateGameArea() {
   }
   if (everyinterval(650)) {
     y = myGameArea.canvas.height;
-    myObstacles4.push(new component(50, 50, "https://i.imgur.com/Kg3qGZb.png", 300, 0, "image"));
+    myObstacles4.push(new component(70, 70, "https://i.imgur.com/k1gfSzQ.png", 300, 0, "image"));
   }
   for (i = 0; i < myObstacles4.length; i += 1) {
     myObstacles4[i].y += 2;
