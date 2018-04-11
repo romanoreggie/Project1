@@ -1,23 +1,35 @@
 # Deadliest Catch
+
 -------------------------------------
 ## Objective
+
 The objective of this game is to slide along the bottom of the screen and catch specific objects as they fall while avoiding other objects.
+
 -------------------------------------
 ## Game Play Preview:
+
 ![](https://i.imgur.com/8E1bIZW.png)
 -------------------------------------
 
 ## Play the Game Here:
-[illegal-friends.surge.sh]
+
+illegal-friends.surge.sh
+
 -------------------------------------
 ## Motivation
+
 Create a game that challenges users reaction and timing along the way while also pushing myself to develop something more than I have before.
+
 -------------------------------------
 ## Wireframe Mockup
+
 ![](https://i.imgur.com/HuNM9Ct.png)
+
 -------------------------------------
 ## Technology behind the design:
+
 Built using HTML, Bootstrap, CSS, and Javascript.
+
 -------------------------------------
 ## User 1
 **Little Jimmy**
@@ -87,6 +99,7 @@ As a user, I should be able to see pieces falling from the top of the screen.
 As a user, I should be able to catch objects and score points.
 
 As a user, I should be able to see my current score and how much time is left.
+
 --------------------------------------
 ## Stretch Goals ##
 
