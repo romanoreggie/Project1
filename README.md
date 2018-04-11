@@ -51,14 +51,17 @@ Small town somewhere in the USA.
 -------------------------------------
 ## User 2
 **Sarah**
+
 Age: 8
 
 Beach town somewhere on the West Coast.
 
 **Goals**
+
 -Scare her alien looking new born brother.
 
 **Motivation**
+
 -To one day make her parents realize she is truly the best child.
 
 -Entertain herself while plotting against her brother.
