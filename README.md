@@ -48,6 +48,7 @@ Small town somewhere in the USA.
 -Games that have no real challenge to them
 
 -His small town
+
 -------------------------------------
 ## User 2
 **Sarah**
@@ -75,6 +76,7 @@ Beach town somewhere on the West Coast.
 **Dislikes**
 
 -Being told no
+
 -------------------------------------
 ## MVP User Stories ##
 
